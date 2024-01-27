@@ -1,0 +1,23 @@
+<!-- client/templates/login.html -->
+<template name="login">
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="email">Email:</label>
+      <input type="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" name="password" required>
+
+      <label for="role">Role:</label>
+      <select name="role">
+        <option value="admin">Admin</option>
+        <option value="borrower">Borrower</option>
+        <option value="lender">Lender</option>
+      </select>
+
+      <button type="submit">Login</button>
+    </form>
+    <p class="error-message">{{errorMessage}}</p>
+  </div>
+</template>

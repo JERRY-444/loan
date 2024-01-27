@@ -1,0 +1,39 @@
+<!-- client/templates/dashboard.html -->
+<template name="dashboard">
+  <div class="dashboard-container">
+    <h2>Dashboard</h2>
+    {{#if isRole "borrower"}}
+      {{> borrowerDashboard}}
+    {{/if}}
+    {{#if isRole "lender"}}
+      {{> lenderDashboard}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="borrowerDashboard">
+  <h3>Borrower Dashboard</h3>
+  <form id="loan-request-form">
+    <label for="loanAmount">Loan Amount:</label>
+    <input type="number" name="loanAmount" required>
+
+    <button type="submit">Request Loan</button>
+  </form>
+  <ul>
+    {{#each loanRequests}}
+      <li>{{loanData}}</li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="lenderDashboard">
+  <h3>Lender Dashboard</h3>
+  <ul>
+    {{#each loanRequests}}
+      <li>
+        {{loanData}}
+        <button class="approve-loan">Approve Loan</button>
+      </li>
+    {{/each}}
+  </ul>
+</template>
