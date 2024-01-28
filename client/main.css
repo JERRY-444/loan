@@ -1,0 +1,39 @@
+body {
+  background-image: url('/bank.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: #007bff;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 20px 20px;
+  font-size: 24px;
+}
+
+.main-content {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  background-image: url('/bank.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content h1 {
+  margin: 0;
+}

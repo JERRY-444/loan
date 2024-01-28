@@ -1,0 +1,24 @@
+<template name="register">
+  <div class="container">
+    <h1>Register</h1>
+    <form>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select class="form-control" id="role">
+          <option value="admin">Admin</option>
+          <option value="borrower">Borrower</option>
+          <option value="lender">Lender</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="username">Email</label>
+        <input type="email" class="form-control" id="username" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password">
+      </div>
+      <button type="submit" class="btn btn-primary" id="register">Register</button>
+    </form>
+  </div>
+</template>
